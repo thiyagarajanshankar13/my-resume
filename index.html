@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Thiyagarajan Shankaranarayanan — Data Product Leader</title>
+<meta name="description" content="Thiyagarajan Shankaranarayanan — Product Owner, Data Management at ANZ Bank. Data Mesh, enterprise metadata, cloud data platforms and federated governance for tier-1 banking.">
+<meta property="og:title" content="Thiyagarajan Shankaranarayanan — Data Product Leader">
+<meta property="og:description" content="Building governed, scalable enterprise data platforms: Data Mesh, metadata hubs, GCP data nodes and regulatory data for tier-1 banks.">
+<meta property="og:url" content="https://ts13.net/">
+<meta property="og:type" content="profile">
+<link rel="canonical" href="https://ts13.net/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f766e'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='26' font-weight='700' fill='white' text-anchor='middle'%3ETS%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f7f6f2; --surface:#ffffff; --ink:#14201f; --muted:#5b6866; --line:#e3e1d9;
+  --accent:#0f766e; --accent-soft:#e3f1ef; --max:1080px;
+}
+@media (prefers-color-scheme: dark){
+  :root{ --bg:#0e1514; --surface:#151f1e; --ink:#e8eeec; --muted:#9aa8a5; --line:#24312f;
+         --accent:#2dd4bf; --accent-soft:#12312d; }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+
+/* nav */
+header.nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font-weight:700;letter-spacing:.02em;color:var(--ink)}
+.logo span{color:var(--accent)}
+nav a{color:var(--muted);margin-left:22px;font-size:14px;font-weight:500}
+nav a:hover{color:var(--ink);text-decoration:none}
+@media (max-width:640px){ nav a:not(.cta){display:none} }
+
+/* hero */
+.hero{padding-top:96px;padding-bottom:72px}
+.eyebrow{font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+h1{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:clamp(36px,6vw,64px);line-height:1.08;margin:14px 0 20px;letter-spacing:-.01em}
+.lede{font-size:clamp(17px,2vw,20px);color:var(--muted);max-width:720px;margin:0 0 32px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 20px;border-radius:10px;font-weight:600;font-size:15px;border:1px solid var(--line);color:var(--ink);background:var(--surface)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+@media (prefers-color-scheme: dark){ .btn.primary{color:#062a26} }
+.btn:hover{text-decoration:none;transform:translateY(-1px)}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-top:64px}
+.stat{background:var(--surface);padding:22px}
+.stat b{display:block;font-family:Fraunces,Georgia,serif;font-size:32px;font-weight:600;line-height:1.1}
+.stat span{color:var(--muted);font-size:14px}
+@media (max-width:760px){ .stats{grid-template-columns:repeat(2,1fr)} }
+
+/* sections */
+section{padding:72px 0;border-top:1px solid var(--line)}
+h2{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:clamp(26px,3.4vw,36px);margin:0 0 8px}
+.sub{color:var(--muted);margin:0 0 40px;max-width:680px}
+
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media (max-width:860px){ .grid3{grid-template-columns:1fr} }
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:24px}
+.card h3{margin:0 0 8px;font-size:17px}
+.card p{margin:0;color:var(--muted);font-size:15px}
+.icon{width:36px;height:36px;border-radius:9px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;margin-bottom:14px}
+
+/* timeline */
+.tl{position:relative;margin:0;padding:0;list-style:none}
+.tl:before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.tl li{position:relative;padding:0 0 34px 36px}
+.tl li:before{content:"";position:absolute;left:0;top:6px;width:16px;height:16px;border-radius:50%;background:var(--bg);border:3px solid var(--accent)}
+.tl .when{font-size:13px;font-weight:600;color:var(--accent);letter-spacing:.03em}
+.tl h3{margin:2px 0 2px;font-size:18px}
+.tl .org{color:var(--muted);font-size:14px;margin-bottom:8px}
+.tl p{margin:0;color:var(--muted);font-size:15px;max-width:760px}
+details.more{margin-top:8px}
+details.more summary{cursor:pointer;color:var(--accent);font-size:14px;font-weight:600}
+details.more ul{margin:10px 0 0;padding-left:18px;color:var(--muted);font-size:15px}
+
+/* chips */
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:6px 14px;font-size:14px}
+.skillgroup{margin-bottom:26px}
+.skillgroup h3{font-size:14px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin:0 0 12px}
+
+/* contact */
+.contact{text-align:center}
+.contact .lede{margin:0 auto 28px}
+.contact .btns{justify-content:center}
+footer{padding:28px 0;color:var(--muted);font-size:13px;border-top:1px solid var(--line)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#top">TS<span>13</span></a>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#focus">Focus</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a class="cta" href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap hero">
+    <div class="eyebrow">Product Owner · Data Management · ANZ Bank, Melbourne</div>
+    <h1>Thiyagarajan<br>Shankaranarayanan</h1>
+    <p class="lede">I build enterprise data products and platforms for tier-1 banks. My work covers Data Mesh, metadata hubs, cloud data nodes on GCP and federated governance, at scale and within regulators' rules.</p>
+    <div class="btns">
+      <a class="btn primary" href="#contact">Get in touch</a>
+      <a class="btn" href="#experience">View experience</a>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><b>18+</b><span>years in data &amp; BI</span></div>
+      <div class="stat"><b>3,000 TB</b><span>historical data migrated (Citi SEA)</span></div>
+      <div class="stat"><b>5</b><span>regulatory regimes delivered</span></div>
+      <div class="stat"><b>3</b><span>countries of teams built &amp; led</span></div>
+    </div>
+  </div>
+
+  <section id="about">
+    <div class="wrap">
+      <h2>About</h2>
+      <p class="sub">A data leader who connects technical architecture to business strategy.</p>
+      <div class="grid3" style="grid-template-columns:2fr 1fr">
+        <div class="card">
+          <p style="color:var(--ink);font-size:16px">I'm the Product Owner for ANZ's enterprise data management portfolio. That includes the Ab Initio Metadata Hub, a Neo4j graph metadata repository, Alex Solutions, the <strong>data.anz</strong> marketplace and the bank's Data Mesh Control Plane.</p>
+          <p style="margin-top:14px">Before this, I set up the Commercial Data Node and the Risk Data Hub on Google Cloud, delivered ANZ's internal data marketplace on an Open DPDS-based data product standard, and led BI and data warehousing programs for Citibank across Southeast and North Asia. My career began in ETL engineering and reconciliation for State Street, so I know the work from the pipeline up.</p>
+        </div>
+        <div class="card">
+          <h3>Regulatory programs</h3>
+          <div class="chips" style="margin-top:12px">
+            <span class="chip">APRA</span><span class="chip">MAS</span><span class="chip">HKMA</span><span class="chip">Bank of Thailand</span><span class="chip">EPS</span>
+          </div>
+          <h3 style="margin-top:22px">Teams across</h3>
+          <div class="chips" style="margin-top:12px">
+            <span class="chip">Australia</span><span class="chip">Vietnam</span><span class="chip">India</span><span class="chip">Singapore</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="focus">
+    <div class="wrap">
+      <h2>What I focus on</h2>
+      <p class="sub">Areas where I've led delivery from strategy through to production.</p>
+      <div class="grid3">
+        <div class="card"><div class="icon">◈</div><h3>Data Mesh &amp; Marketplace</h3><p>Data product standards based on Open DPDS, custom data contracts, and federated governance where access controls are built in from the start.</p></div>
+        <div class="card"><div class="icon">⬡</div><h3>Metadata &amp; Lineage</h3><p>The Ab Initio Metadata Hub, a canonical data model, Neo4j graph metadata and a central control plane for exchanging metadata across the bank.</p></div>
+        <div class="card"><div class="icon">☁</div><h3>Cloud Data Platforms</h3><p>Data nodes on GCP (DGCP, Commercial Data Node, Risk Data Hub), ingestion frameworks, and migrations from GRID to cloud.</p></div>
+        <div class="card"><div class="icon">⚖</div><h3>Governance &amp; Security</h3><p>Centralised user access management, role-based access control, detokenisation services and controls that stand up to audit.</p></div>
+        <div class="card"><div class="icon">✓</div><h3>Data Quality &amp; Reconciliation</h3><p>Automated data quality and reconciliation frameworks that meet MAS audit requirements, plus reusable ETL pattern libraries.</p></div>
+        <div class="card"><div class="icon">$</div><h3>FinOps &amp; Modernisation</h3><p>Retiring legacy platforms, consolidating onto strategic ones, and cutting costs across the portfolio.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="wrap">
+      <h2>Experience</h2>
+      <p class="sub">From ETL engineering to owning enterprise data products.</p>
+      <ul class="tl">
+        <li>
+          <div class="when">Nov 2025 — Present</div>
+          <h3>Product Owner — Group Data Management</h3>
+          <div class="org">ANZ Bank, Melbourne</div>
+          <p>I own ANZ's enterprise data management portfolio: metadata management, canonical data modelling, graph metadata storage and the data marketplace.</p>
+          <details class="more"><summary>Highlights</summary><ul>
+            <li>Portfolio: Ab Initio Metadata Hub, canonical data model, Neo4j, Alex Solutions, data.anz, Data Mesh Control Plane</li>
+            <li>Delivered metadata releases for the bank's climate program, Pacific and technology initiatives</li>
+            <li>Led the decommissioning of legacy data management platforms and drove FinOps savings</li>
+          </ul></details>
+        </li>
+        <li>
+          <div class="when">Nov 2025 — Apr 2026</div>
+          <h3>Product Owner — Commercial Data Node</h3>
+          <div class="org">ANZ Bank, Melbourne · parallel role</div>
+          <p>Led the architecture and deployment of the Commercial Data Node on GCP, a core part of ANZ's federated data strategy for Business &amp; Private Banking.</p>
+          <details class="more"><summary>Highlights</summary><ul>
+            <li>Set the standards for ingestion, transformation and self-service data exploration</li>
+            <li>Designed a centralised User Access Management (UAM) security model with role-based access control</li>
+          </ul></details>
+        </li>
+        <li>
+          <div class="when">Oct 2023 — Oct 2025</div>
+          <h3>Product Owner — Data Mesh Marketplace (data.anz)</h3>
+          <div class="org">ANZ Bank, Melbourne</div>
+          <p>Delivered ANZ's internal data marketplace, where all staff can discover, analyse and subscribe to governed data products.</p>
+          <details class="more"><summary>Highlights</summary><ul>
+            <li>Created a data product standard based on Open DPDS and custom data contracts</li>
+            <li>Set up the federated governance model for ANZ's data mesh</li>
+            <li>Built metadata connectors across nodes and the protocols for publishing data quality metrics</li>
+          </ul></details>
+        </li>
+        <li>
+          <div class="when">Jun 2022 — Sep 2023</div>
+          <h3>Product Owner — DGCP Platform</h3>
+          <div class="org">ANZ Bank, Melbourne</div>
+          <p>Extended the data treatment service (DTaaS) to support detokenisation, upgraded the batch ingestion framework, and set up the Vietnam data team.</p>
+        </li>
+        <li>
+          <div class="when">Jul 2021 — May 2022</div>
+          <h3>Platform Lead — Group Risk, Risk Data Hub</h3>
+          <div class="org">ANZ Bank, Melbourne</div>
+          <p>Shaped the strategy for the Risk GRID-to-Cloud migration and set up the Risk Data Hub as a core enterprise data node.</p>
+        </li>
+        <li>
+          <div class="when">Jun 2019 — Jun 2021</div>
+          <h3>Senior Data Analyst — ANZ Plus &amp; EDIA CDE</h3>
+          <div class="org">ANZ Bank, Melbourne</div>
+          <p>Defined the data sourcing for the ANZx / ANZ Plus program, extended the SoBIH and DGCP platforms, and ran tech spikes for FDX on OpenShift and GCP (later named Stargate).</p>
+        </li>
+        <li>
+          <div class="when">Sep 2015 — Jun 2019</div>
+          <h3>Onsite Lead, Senior Data Analyst — ANZ Data</h3>
+          <div class="org">TCS for ANZ Bank, Melbourne</div>
+          <p>Built and scaled TCS's data analysis and engineering teams for ANZ. Delivered APRA, EPS, China and Singapore regulatory programs, and provisioned ANZ's first Cloudera cluster.</p>
+        </li>
+        <li>
+          <div class="when">Nov 2012 — Jun 2015</div>
+          <h3>Onsite Lead — Global Common (G2C) Data Warehousing</h3>
+          <div class="org">TCS for Citibank, Singapore</div>
+          <p>Delivered Nextgen BI, a unified data model for Cards and Retail across Southeast and North Asia. Built the automation for a 3,000 TB history migration and regulatory reporting for MAS, HKMA and the Bank of Thailand.</p>
+        </li>
+        <li>
+          <div class="when">2011 — 2015</div>
+          <h3>BI Solution Designer — Centre of Excellence</h3>
+          <div class="org">TCS, Chennai &amp; Singapore</div>
+          <p>Built accelerators: the TCS DQ framework, the Mastercraft DSIAT impact analysis platform, a cross-database migration framework, OCR extraction connectors, and a lineage workbench.</p>
+        </li>
+        <li>
+          <div class="when">Jul 2008 — Aug 2011</div>
+          <h3>BI Engineer — Transaction Lifecycle Management</h3>
+          <div class="org">Oracle (OFSSL) for State Street, Bangalore</div>
+          <p>Built DataStage ETL and reconciliation for the TLM and Securities Principal data marts. Subject-matter expert for the ALIAD, ALDLF and ALDCF exchange formats.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap">
+      <h2>Platforms &amp; skills</h2>
+      <p class="sub">Tools and practices I've used in production.</p>
+      <div class="skillgroup"><h3>Data management &amp; metadata</h3><div class="chips">
+        <span class="chip">Ab Initio Metadata Hub</span><span class="chip">Neo4j</span><span class="chip">Alex Solutions</span><span class="chip">IBM IGC</span><span class="chip">Data Contracts</span><span class="chip">Open DPDS</span><span class="chip">Data Mesh</span>
+      </div></div>
+      <div class="skillgroup"><h3>Cloud &amp; platforms</h3><div class="chips">
+        <span class="chip">Google Cloud Platform</span><span class="chip">Teradata</span><span class="chip">Cloudera / Big Data</span><span class="chip">OpenShift</span><span class="chip">Oracle</span><span class="chip">Netezza</span>
+      </div></div>
+      <div class="skillgroup"><h3>Integration &amp; ETL</h3><div class="chips">
+        <span class="chip">IBM DataStage</span><span class="chip">Informatica</span><span class="chip">Talend</span><span class="chip">SmartStream TLM</span><span class="chip">Sparx EA (MDG)</span>
+      </div></div>
+      <div class="skillgroup"><h3>Delivery &amp; leadership</h3><div class="chips">
+        <span class="chip">Product Ownership</span><span class="chip">Agile</span><span class="chip">Jira / RTC</span><span class="chip">FinOps</span><span class="chip">Stakeholder Management</span><span class="chip">Team Building</span>
+      </div></div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <h2>Let's talk data</h2>
+      <p class="lede">Open to conversations about data platforms, Data Mesh, metadata strategy and data product leadership.</p>
+      <div class="btns">
+        <a class="btn primary" href="mailto:thiyagarajan.shankar@live.com">thiyagarajan.shankar@live.com</a>
+        <!-- <a class="btn" href="https://www.linkedin.com/in/YOUR-HANDLE">LinkedIn</a> -->
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="y">2026</span> Thiyagarajan Shankaranarayanan</span>
+    <span>Melbourne, Australia · ts13.net</span>
+  </div>
+</footer>
+<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
+</html>
