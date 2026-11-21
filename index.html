@@ -140,13 +140,27 @@ h2{font-size:clamp(32px,4.6vw,54px);line-height:1.05;margin:0 0 18px;font-weight
 .tile.hero-tile p{font-size:17px;max-width:760px}
 .tile.hero-tile .ico{width:56px;height:56px}
 .tile.hero-tile .ico svg{width:30px;height:30px}
+.tile.biz{grid-column:span 6;padding:40px;display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:center;background:linear-gradient(200deg,#1a2a14 0%,#0f1828 55%)}
+.tile.biz h3{font-size:clamp(24px,2.8vw,32px);line-height:1.2;margin-bottom:14px}
+.tile.biz p{font-size:16px}
+.tile.biz .ico{background:rgba(163,230,53,.12);color:var(--lime)}
+.bridge{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:22px;border:1px solid var(--line);border-radius:16px;background:rgba(7,11,20,.5);margin-bottom:14px}
+.bridge .node{text-align:center;font-family:"Space Grotesk"}
+.bridge .node b{display:block;font-size:30px;line-height:1}
+.bridge .node small{color:var(--muted);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.bridge .link{flex:1;height:2px;background:var(--grad);position:relative;border-radius:2px}
+.bridge .link:before,.bridge .link:after{content:"";position:absolute;top:-4px;width:10px;height:10px;border-radius:50%;background:var(--lime)}
+.bridge .link:before{left:0;background:var(--teal)}.bridge .link:after{right:0}
+.biz-list{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.biz-list li{display:flex;gap:10px;align-items:flex-start;font-size:14.5px;color:var(--ink)}
+.biz-list li:before{content:"";flex:none;width:8px;height:8px;margin-top:7px;border-radius:2px;background:var(--grad)}
 .tile.hl{background:linear-gradient(160deg,#10263a 0%,#0f1828 60%)}
 .tile .num{position:absolute;right:22px;top:18px;font-family:"Space Grotesk";font-size:13px;color:var(--dim)}
 .tile .ico{width:46px;height:46px;border-radius:13px;display:grid;place-items:center;background:rgba(45,212,191,.12);color:var(--teal);margin-bottom:22px}
 .tile .ico svg{width:24px;height:24px}
 .tile h3{font-size:21px;margin:0 0 10px}
 .tile p{color:var(--muted);margin:0;font-size:15px}
-@media (max-width:900px){ .bento{grid-template-columns:1fr} .tile,.tile.wide,.tile.hero-tile{grid-column:auto} .tile.hero-tile{padding:28px} .about-grid{grid-template-columns:1fr;gap:36px} }
+@media (max-width:900px){ .bento{grid-template-columns:1fr} .tile,.tile.wide,.tile.hero-tile,.tile.biz{grid-column:auto} .tile.hero-tile,.tile.biz{padding:28px} .tile.biz{grid-template-columns:1fr;gap:24px} .about-grid{grid-template-columns:1fr;gap:36px} }
 
 /* ventures */
 #ventures{background:var(--bg2);border-block:1px solid var(--line)}
@@ -267,7 +281,7 @@ footer nav a:hover{color:var(--ink)}
       <div class="stats">
         <div class="stat"><b class="grad-text" data-count="18" data-suffix="+">18+</b><span>years in data &amp; BI</span></div>
         <div class="stat"><b class="grad-text" data-count="5">5</b><span>regulatory regimes delivered</span></div>
-        <div class="stat"><b class="grad-text" data-count="4">4</b><span>countries with teams led</span></div>
+        <div class="stat"><b class="grad-text">IN × AU</b><span>business &amp; teams established</span></div>
         <div class="stat"><b class="grad-text" data-count="3">3</b><span>tier-1 financial institutions</span></div>
       </div>
     </div>
@@ -317,6 +331,22 @@ footer nav a:hover{color:var(--ink)}
         <div class="tile wide reveal"><span class="num">03</span><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2 3 7v10l9 5 9-5V7z"/><path d="M3 7l9 5 9-5M12 12v10"/></svg></div><h3>Metadata &amp; Lineage</h3><p>Enterprise metadata hubs, canonical data models, graph-based metadata on Neo4j, and a central control plane for exchanging metadata.</p></div>
         <div class="tile wide reveal"><span class="num">04</span><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5z"/><path d="m9 12 2 2 4-4"/></svg></div><h3>Governance &amp; Security</h3><p>Role-based access control, detokenisation services and data controls that stand up to audit and regulators.</p></div>
         <div class="tile wide reveal"><span class="num">05</span><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 3v18h18"/><path d="m7 15 4-4 3 3 5-6"/></svg></div><h3>FinOps &amp; Modernisation</h3><p>Retiring legacy platforms, consolidating onto strategic cloud platforms and cutting costs.</p></div>
+        <div class="tile biz reveal"><span class="num">06</span>
+          <div>
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M18.5 20a6.5 6.5 0 0 0-3-5.5"/></svg></div>
+            <h3>Building Business Across India &amp; Australia</h3>
+            <p>I've set up and grown teams, practices, client accounts and businesses in both countries. That means hiring and building data teams from scratch, growing financial services accounts in Australia, and running onshore and offshore delivery as one team. I bring the same experience to building my own ventures.</p>
+          </div>
+          <div>
+            <div class="bridge"><div class="node"><b class="grad-text">IN</b><small>India</small></div><div class="link"></div><div class="node"><b class="grad-text">AU</b><small>Australia</small></div></div>
+            <ul class="biz-list">
+              <li>Built and scaled data teams and practices across Bangalore and Melbourne</li>
+              <li>Grew financial services client accounts across Australia</li>
+              <li>Ran onshore and offshore models: hiring, operations and team integration</li>
+              <li>Established ventures with operations across both markets</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </section>
