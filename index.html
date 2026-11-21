@@ -73,6 +73,16 @@ h2{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:clamp(26px,3.4vw
 .card p{margin:0;color:var(--muted);font-size:15px}
 .icon{width:36px;height:36px;border-radius:9px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;margin-bottom:14px}
 
+/* ventures */
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media (max-width:860px){ .grid2{grid-template-columns:1fr} }
+.venture{display:flex;flex-direction:column;padding:28px}
+.venture .role{display:inline-block;align-self:flex-start;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);background:var(--accent-soft);border-radius:999px;padding:4px 12px;margin-bottom:14px}
+.venture h3{font-family:Fraunces,Georgia,serif;font-size:24px;font-weight:600;margin:0 0 10px}
+.venture h4{margin:18px 0 4px;font-size:15px}
+.venture p{margin:0}
+.venture .links{margin-top:auto;padding-top:20px;display:flex;gap:18px;flex-wrap:wrap;font-size:14px;font-weight:600}
+
 /* timeline */
 .tl{position:relative;margin:0;padding:0;list-style:none}
 .tl:before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--line)}
@@ -108,6 +118,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
     <nav>
       <a href="#about">About</a>
       <a href="#focus">Focus</a>
+      <a href="#ventures">Ventures</a>
       <a href="#experience">Experience</a>
       <a href="#skills">Skills</a>
       <a class="cta" href="#contact">Contact</a>
@@ -171,6 +182,36 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
         <div class="card"><div class="icon">⚖</div><h3>Governance &amp; Security</h3><p>Centralised user access management, role-based access control, detokenisation services and controls that stand up to audit.</p></div>
         <div class="card"><div class="icon">✓</div><h3>Data Quality &amp; Reconciliation</h3><p>Automated data quality and reconciliation frameworks that meet MAS audit requirements, plus reusable ETL pattern libraries.</p></div>
         <div class="card"><div class="icon">$</div><h3>FinOps &amp; Modernisation</h3><p>Retiring legacy platforms, consolidating onto strategic ones, and cutting costs across the portfolio.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="ventures">
+    <div class="wrap">
+      <h2>Ventures</h2>
+      <p class="sub">Outside the bank, I help shape software for Australian organisations and communities.</p>
+      <div class="grid2">
+        <div class="card venture">
+          <span class="role">Advisory Board · Creator &amp; Product Architect</span>
+          <h3>Avrotech &amp; Avrosphere</h3>
+          <p>I sit on the advisory board of <strong>Avrotech</strong>, a Melbourne company that builds business platforms, apps and email for Australian organisations, with hosting in Australia.</p>
+          <h4>Avrosphere</h4>
+          <p>I created Avrosphere, Avrotech's platform for clubs and member businesses. It runs members, bookings, payments, store, email and WhatsApp messaging, website and courses in one place.</p>
+          <div class="links">
+            <a href="https://www.avrotech.au/" target="_blank" rel="noopener">avrotech.au ↗</a>
+            <a href="https://www.avrotech.au/avrosphere" target="_blank" rel="noopener">Avrosphere ↗</a>
+          </div>
+        </div>
+        <div class="card venture">
+          <span class="role">Creator &amp; Product Architect</span>
+          <h3>AvroNext</h3>
+          <p>AvroNext is an open-source, modern front end for Nextcloud. It brings projects, spaces, files, notes, mail and chat into one clean workspace on infrastructure you control.</p>
+          <h4>Open source</h4>
+          <p>Released under the AGPL-3.0 licence.</p>
+          <div class="links">
+            <a href="https://www.avrotech.au/avronext" target="_blank" rel="noopener">AvroNext ↗</a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
