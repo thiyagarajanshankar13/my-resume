@@ -135,13 +135,18 @@ h2{font-size:clamp(32px,4.6vw,54px);line-height:1.05;margin:0 0 18px;font-weight
 .tile{position:relative;grid-column:span 2;padding:28px;border-radius:20px;background:var(--card);border:1px solid var(--line);overflow:hidden;transition:transform .3s,border-color .3s}
 .tile:hover{transform:translateY(-4px);border-color:#2a3b57}
 .tile.wide{grid-column:span 3}
+.tile.hero-tile{grid-column:span 6;padding:40px}
+.tile.hero-tile h3{font-size:clamp(26px,3vw,36px);margin-bottom:14px}
+.tile.hero-tile p{font-size:17px;max-width:760px}
+.tile.hero-tile .ico{width:56px;height:56px}
+.tile.hero-tile .ico svg{width:30px;height:30px}
 .tile.hl{background:linear-gradient(160deg,#10263a 0%,#0f1828 60%)}
 .tile .num{position:absolute;right:22px;top:18px;font-family:"Space Grotesk";font-size:13px;color:var(--dim)}
 .tile .ico{width:46px;height:46px;border-radius:13px;display:grid;place-items:center;background:rgba(45,212,191,.12);color:var(--teal);margin-bottom:22px}
 .tile .ico svg{width:24px;height:24px}
 .tile h3{font-size:21px;margin:0 0 10px}
 .tile p{color:var(--muted);margin:0;font-size:15px}
-@media (max-width:900px){ .bento{grid-template-columns:1fr} .tile,.tile.wide{grid-column:auto} .about-grid{grid-template-columns:1fr;gap:36px} }
+@media (max-width:900px){ .bento{grid-template-columns:1fr} .tile,.tile.wide,.tile.hero-tile{grid-column:auto} .tile.hero-tile{padding:28px} .about-grid{grid-template-columns:1fr;gap:36px} }
 
 /* ventures */
 #ventures{background:var(--bg2);border-block:1px solid var(--line)}
@@ -245,8 +250,8 @@ footer nav a:hover{color:var(--ink)}
         <div>
           <span class="pill"><span class="dot"></span>Product Owner · Data Management · ANZ Bank</span>
           <h1>Thiyagarajan <span class="last grad-text">Shankaranarayanan</span></h1>
-          <p class="roles">I build <span class="typed" id="typed">Data Mesh platforms</span></p>
-          <p class="lede">I've spent 18 years building enterprise data products for tier-1 banks. I turn complex data estates into governed, self-serve platforms that teams trust and regulators approve.</p>
+          <p class="roles">I build <span class="typed" id="typed">cloud data platforms on GCP</span></p>
+          <p class="lede">I've spent 18 years in data for tier-1 banks. I build cloud data platforms on Google Cloud and turn complex data estates into governed, self-serve platforms that teams trust and regulators approve.</p>
           <div class="btns">
             <a class="btn primary" href="#contact"><svg class="i"><use href="#i-mail"/></svg>Get in touch</a>
             <a class="btn" href="https://www.linkedin.com/in/thiyagarajan-shankaranarayanan" target="_blank" rel="noopener"><svg class="i"><use href="#i-in"/></svg>LinkedIn</a>
@@ -272,8 +277,8 @@ footer nav a:hover{color:var(--ink)}
   <!-- MARQUEE -->
   <div class="marquee" aria-hidden="true">
     <div class="track">
-      <span>ANZ Bank</span><span>Citibank</span><span>State Street</span><span>Avrotech</span><span>Google Cloud</span><span>Data Mesh</span><span>Ab Initio</span><span>Neo4j</span><span>Teradata</span><span>APRA · MAS · HKMA</span>
-      <span>ANZ Bank</span><span>Citibank</span><span>State Street</span><span>Avrotech</span><span>Google Cloud</span><span>Data Mesh</span><span>Ab Initio</span><span>Neo4j</span><span>Teradata</span><span>APRA · MAS · HKMA</span>
+      <span>Google Cloud</span><span>ANZ Bank</span><span>Citibank</span><span>State Street</span><span>Avrotech</span><span>Data Mesh</span><span>Ab Initio</span><span>Neo4j</span><span>Teradata</span><span>APRA · MAS · HKMA</span>
+      <span>Google Cloud</span><span>ANZ Bank</span><span>Citibank</span><span>State Street</span><span>Avrotech</span><span>Data Mesh</span><span>Ab Initio</span><span>Neo4j</span><span>Teradata</span><span>APRA · MAS · HKMA</span>
     </div>
   </div>
 
@@ -284,7 +289,7 @@ footer nav a:hover{color:var(--ink)}
         <div class="kicker">About</div>
         <p class="statement">I connect <em class="grad-text">data architecture</em> with <em class="grad-text">business strategy</em> so banks can treat data as a product.</p>
         <p>I'm the Product Owner for ANZ's enterprise data management portfolio. That covers the Ab Initio Metadata Hub, a Neo4j graph metadata repository, Alex Solutions, the <strong>data.anz</strong> marketplace and the bank's Data Mesh Control Plane.</p>
-        <p>Before this, I set up the Commercial Data Node and the Risk Data Hub on Google Cloud, delivered ANZ's internal data marketplace, and led BI programs for Citibank across Asia. I started in ETL engineering for State Street, so I know the work from the pipeline up.</p>
+        <p>Before this, I built and scaled data platforms on Google Cloud: the bank's GCP data lake and domain data nodes for commercial banking and risk. I also delivered ANZ's internal data marketplace and led BI programs for Citibank across Asia. I started in ETL engineering for State Street, so I know the work from the pipeline up.</p>
       </div>
       <div class="facts reveal">
         <div class="fact"><h3>Regulatory programs</h3><div class="tags"><span class="tag">APRA</span><span class="tag">MAS</span><span class="tag">HKMA</span><span class="tag">Bank of Thailand</span><span class="tag">EPS</span></div></div>
@@ -303,11 +308,15 @@ footer nav a:hover{color:var(--ink)}
         <p class="sub">Areas where I've led delivery from strategy through to production.</p>
       </div>
       <div class="bento">
-        <div class="tile wide hl reveal"><span class="num">01</span><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="5" cy="6" r="2.5"/><circle cx="19" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M7.5 6h9M6.3 8.2l4.4 7.6M17.7 8.2l-4.4 7.6"/></svg></div><h3>Data Mesh &amp; Marketplace</h3><p>Data product standards based on Open DPDS, custom data contracts, and federated governance where access controls are built in from the start.</p></div>
-        <div class="tile wide reveal"><span class="num">02</span><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2 3 7v10l9 5 9-5V7z"/><path d="M3 7l9 5 9-5M12 12v10"/></svg></div><h3>Metadata &amp; Lineage</h3><p>The Ab Initio Metadata Hub, a canonical data model, Neo4j graph metadata and a central control plane for exchanging metadata across the bank.</p></div>
-        <div class="tile reveal"><span class="num">03</span><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M17.5 19a4.5 4.5 0 1 0-1.4-8.8A6 6 0 0 0 4.5 12 3.5 3.5 0 0 0 6 19z"/></svg></div><h3>Cloud Data Platforms</h3><p>Data nodes on GCP (DGCP, Commercial Data Node, Risk Data Hub) and migrations from GRID to cloud.</p></div>
-        <div class="tile reveal"><span class="num">04</span><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5z"/><path d="m9 12 2 2 4-4"/></svg></div><h3>Governance &amp; Security</h3><p>Centralised access management, role-based access control, detokenisation services and controls that stand up to audit.</p></div>
-        <div class="tile reveal"><span class="num">05</span><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 3v18h18"/><path d="m7 15 4-4 3 3 5-6"/></svg></div><h3>FinOps &amp; Modernisation</h3><p>Retiring legacy platforms, consolidating onto strategic ones and cutting costs across the portfolio.</p></div>
+        <div class="tile hero-tile hl reveal"><span class="num">01</span><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M17.5 19a4.5 4.5 0 1 0-1.4-8.8A6 6 0 0 0 4.5 12 3.5 3.5 0 0 0 6 19z"/></svg></div>
+          <h3>Cloud Data Platforms on Google Cloud</h3>
+          <p>I've built, scaled and stabilised enterprise data lakes and domain data nodes on GCP. That covers ingestion frameworks, reliable pipelines, self-service exploration, secure access models, and moving legacy on-premises big data and Teradata estates to the cloud.</p>
+          <div class="tags" style="margin-top:20px"><span class="tag">Google Cloud Platform</span><span class="tag">Cloud data lakes</span><span class="tag">Domain data nodes</span><span class="tag">Ingestion frameworks</span><span class="tag">Cloud migration</span><span class="tag">Access &amp; security</span></div>
+        </div>
+        <div class="tile wide reveal"><span class="num">02</span><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="5" cy="6" r="2.5"/><circle cx="19" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M7.5 6h9M6.3 8.2l4.4 7.6M17.7 8.2l-4.4 7.6"/></svg></div><h3>Data Mesh &amp; Marketplace</h3><p>Data product standards based on Open DPDS, data contracts, and federated governance where access controls are built in from the start.</p></div>
+        <div class="tile wide reveal"><span class="num">03</span><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2 3 7v10l9 5 9-5V7z"/><path d="M3 7l9 5 9-5M12 12v10"/></svg></div><h3>Metadata &amp; Lineage</h3><p>Enterprise metadata hubs, canonical data models, graph-based metadata on Neo4j, and a central control plane for exchanging metadata.</p></div>
+        <div class="tile wide reveal"><span class="num">04</span><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5z"/><path d="m9 12 2 2 4-4"/></svg></div><h3>Governance &amp; Security</h3><p>Role-based access control, detokenisation services and data controls that stand up to audit and regulators.</p></div>
+        <div class="tile wide reveal"><span class="num">05</span><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 3v18h18"/><path d="m7 15 4-4 3 3 5-6"/></svg></div><h3>FinOps &amp; Modernisation</h3><p>Retiring legacy platforms, consolidating onto strategic cloud platforms and cutting costs.</p></div>
       </div>
     </div>
   </section>
@@ -361,24 +370,24 @@ footer nav a:hover{color:var(--ink)}
           <ul><li>Ab Initio Metadata Hub, canonical data model, Neo4j, Alex Solutions, data.anz and the Data Mesh Control Plane</li><li>Metadata releases for the climate program, Pacific and technology initiatives</li><li>Decommissioning legacy platforms and driving FinOps savings</li></ul>
         </div></div>
         <div class="xp-item"><div class="xp-when"><b>2025 — 2026</b>Nov 2025 – Apr 2026</div><div class="xp-body">
-          <h3>Product Owner, Commercial Data Node</h3><div class="xp-org">ANZ Bank · parallel role</div>
-          <p>Led the architecture and deployment of the Commercial Data Node on GCP for Business &amp; Private Banking. Set the standards for ingestion and self-service, and designed a centralised access management model with role-based access control.</p>
+          <h3>Product Owner, Commercial Data Node on GCP</h3><div class="xp-org">ANZ Bank · parallel role</div>
+          <p>Led the architecture and deployment of a domain data node on Google Cloud for Business &amp; Private Banking. Set the standards for ingestion and self-service, and designed a centralised access management model with role-based access control.</p>
         </div></div>
         <div class="xp-item"><div class="xp-when"><b>2023 — 2025</b>Oct 2023 – Oct 2025</div><div class="xp-body">
           <h3>Product Owner, Data Mesh Marketplace (data.anz)</h3><div class="xp-org">ANZ Bank · Melbourne</div>
           <p>Delivered ANZ's internal data marketplace, where all staff can discover and subscribe to governed data products. Created a data product standard based on Open DPDS, set up data contracts and the federated governance model, and built metadata connectors across the data nodes.</p>
         </div></div>
         <div class="xp-item"><div class="xp-when"><b>2022 — 2023</b>Jun 2022 – Sep 2023</div><div class="xp-body">
-          <h3>Product Owner, DGCP Platform</h3><div class="xp-org">ANZ Bank · Melbourne</div>
-          <p>Extended the data treatment service (DTaaS) to support detokenisation, upgraded the batch ingestion framework, and set up the Vietnam data team.</p>
+          <h3>Product Owner, GCP Data Lake Platform</h3><div class="xp-org">ANZ Bank · Melbourne</div>
+          <p>Owned the bank's enterprise data lake on Google Cloud. Extended its data treatment service to support detokenisation, upgraded the batch ingestion framework to handle reloads, and set up the Vietnam data team.</p>
         </div></div>
         <div class="xp-item"><div class="xp-when"><b>2021 — 2022</b>Jul 2021 – May 2022</div><div class="xp-body">
-          <h3>Platform Lead, Risk Data Hub</h3><div class="xp-org">ANZ Bank · Group Risk</div>
-          <p>Shaped the strategy for the Risk GRID-to-Cloud migration and set up the Risk Data Hub as a core enterprise data node.</p>
+          <h3>Platform Lead, Risk Data Hub on GCP</h3><div class="xp-org">ANZ Bank · Group Risk</div>
+          <p>Shaped the strategy for moving risk analytics from an on-premises big data platform to Google Cloud, and set up the Risk Data Hub as a core data node on GCP.</p>
         </div></div>
         <div class="xp-item extra"><div class="xp-when"><b>2019 — 2021</b>Jun 2019 – Jun 2021</div><div class="xp-body">
-          <h3>Senior Data Analyst, ANZ Plus &amp; EDIA CDE</h3><div class="xp-org">ANZ Bank · Melbourne</div>
-          <p>Defined the data sourcing for the ANZx / ANZ Plus program, extended the SoBIH and DGCP platforms, and ran tech spikes for FDX on OpenShift and GCP (later named Stargate).</p>
+          <h3>Senior Data Analyst, ANZ Plus &amp; Cloud Data Engineering</h3><div class="xp-org">ANZ Bank · Melbourne</div>
+          <p>Defined the data sourcing for the ANZ Plus digital bank, helped build out the bank's data lake on Google Cloud, and designed data movement patterns into GCP, including key management and access controls.</p>
         </div></div>
         <div class="xp-item extra"><div class="xp-when"><b>2015 — 2019</b>Sep 2015 – Jun 2019</div><div class="xp-body">
           <h3>Onsite Lead, ANZ Data</h3><div class="xp-org">TCS for ANZ Bank · Melbourne</div>
@@ -410,8 +419,8 @@ footer nav a:hover{color:var(--ink)}
         <p class="sub">Tools and practices I've used in production.</p>
       </div>
       <div class="skills">
+        <div class="skill reveal"><h3>Cloud data platforms</h3><div class="tags"><span class="tag">Google Cloud Platform</span><span class="tag">Cloud Data Lakes</span><span class="tag">Teradata</span><span class="tag">Cloudera / Big Data</span><span class="tag">OpenShift</span><span class="tag">Oracle</span><span class="tag">Netezza</span></div></div>
         <div class="skill reveal"><h3>Data management &amp; metadata</h3><div class="tags"><span class="tag">Ab Initio Metadata Hub</span><span class="tag">Neo4j</span><span class="tag">Alex Solutions</span><span class="tag">IBM IGC</span><span class="tag">Data Contracts</span><span class="tag">Open DPDS</span><span class="tag">Data Mesh</span></div></div>
-        <div class="skill reveal"><h3>Cloud &amp; platforms</h3><div class="tags"><span class="tag">Google Cloud Platform</span><span class="tag">Teradata</span><span class="tag">Cloudera / Big Data</span><span class="tag">OpenShift</span><span class="tag">Oracle</span><span class="tag">Netezza</span></div></div>
         <div class="skill reveal"><h3>Integration &amp; ETL</h3><div class="tags"><span class="tag">IBM DataStage</span><span class="tag">Informatica</span><span class="tag">Talend</span><span class="tag">SmartStream TLM</span><span class="tag">Sparx EA (MDG)</span></div></div>
         <div class="skill reveal"><h3>Delivery &amp; leadership</h3><div class="tags"><span class="tag">Product Ownership</span><span class="tag">Agile</span><span class="tag">Jira / RTC</span><span class="tag">FinOps</span><span class="tag">Stakeholder Management</span><span class="tag">Team Building</span></div></div>
       </div>
@@ -475,7 +484,7 @@ footer nav a:hover{color:var(--ink)}
   });
 
   // typed roles
-  var words = ['Data Mesh platforms','metadata hubs','cloud data nodes','data marketplaces','governed data products'];
+  var words = ['cloud data platforms on GCP','data lakes on Google Cloud','Data Mesh platforms','data marketplaces','governed data products'];
   var t = document.getElementById('typed');
   if (!reduce){
     var wi = 0, ci = words[0].length, del = true;
